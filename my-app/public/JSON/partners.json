@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "name": "Accounting Pro",
+      "slug": "accounting-pro",
+      "logo": "/Images/logo.webp",
+      "description": "Leading firm in financial advisory and accounting services.",
+      "category": "Accounting"
+    },
+    {
+      "id": 2,
+      "name": "MeterInc",
+      "slug": "meterinc",
+      "logo": "/Images/logo.webp",
+      "description": "IoT partner specializing in energy meters and smart systems.",
+      "category": "Technology"
+    },
+    {
+      "id": 3,
+      "name": "FinanceWorld",
+      "slug": "financeworld",
+      "logo": "/Images/logo.webp",
+      "description": "Global leader in tax and financial solutions.",
+      "category": "Accounting"
+    }
+  ]
+  
