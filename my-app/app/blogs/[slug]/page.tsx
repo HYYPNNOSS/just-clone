@@ -1,41 +1,32 @@
-// @ts-ignore
-
-
-import { notFound } from "next/navigation";
 import Image from "next/image";
 import Navbar from "@/app/components/Navbar/Navbar";
 import Footer from "@/app/components/Footer/Footer";
+import blogs from '@/public/JSON/blogs.json';
+import { notFound } from "next/navigation";
 
-type Blog = {
-  id: number;
-  title: string;
-  slug: string;
-  content: string;
-  image: string;
-};
+// interface BlogPost {
+//   id: number;
+//   title: string;
+//   slug: string;
+//   content: string;
+//   image: string;
+// }
 
 // Generate static paths for pre-rendering
 export async function generateStaticParams() {
-  const res = await fetch(`http://localhost:3000/JSON/blogs.json`);
-  const blogs: Blog[] = await res.json();
-
   return blogs.map((blog) => ({
     slug: blog.slug,
   }));
 }
 
-// Define the type for dynamic route parameters
-interface PageProps {
-  params: {
-    slug: string;
-  };
-}
-
 // The page component that renders individual blog post
-export default async function BlogPostPage({ params }: PageProps) {
-  const res = await fetch(`http://localhost:3000/JSON/blogs.json`);
-  const blogs: Blog[] = await res.json();
-  const blog = blogs.find((b) => b.slug === params.slug);
+export default async function BlogPostPage({ 
+  params 
+}: { 
+  params: Promise<{ slug: string }> 
+}) {
+  const resolvedParams = await params;
+  const blog = blogs.find((b) => b.slug === resolvedParams.slug);
 
   if (!blog) return notFound();
 
@@ -56,19 +47,4 @@ export default async function BlogPostPage({ params }: PageProps) {
       <Footer />
     </section>
   );
-}
-
-// Metadata generation for SEO and OG tags
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const res = await fetch(`http://localhost:3000/JSON/blogs.json`);
-  const blogs: Blog[] = await res.json();
-  const blog = blogs.find((b) => b.slug === params.slug);
-
-  return {
-    title: blog?.title || "Blog Post",
-    description: blog?.content.slice(0, 160) || "Read our latest blog post.",
-    openGraph: {
-      images: blog?.image ? [{ url: blog.image }] : [],
-    },
-  };
 }

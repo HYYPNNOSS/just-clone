@@ -77,7 +77,6 @@ export default function Navbar() {
 								/>
 								<SlidingMenu
 									isOpen={isOpen}
-									onClick={handleSetIsOpen}
 									setIsOpen={handleSetIsOpen}
 								/>
 							</div>

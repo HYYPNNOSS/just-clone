@@ -1,19 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import blogs from '@/public/JSON/blogs.json';
 
-type Blog = {
-  id: number;
-  title: string;
-  slug: string;
-  image: string;
-  excerpt: string; 
-};
 
-export default async function BlogListPage() {
-  const res = await fetch(`http://localhost:3000/JSON/blogs.json`);
-  const blogs: Blog[] = await res.json();
 
-  console.log(blogs);
+export default function BlogListPage() {
   return (
     <div className="p-8 bg-gray-100">
       <h1 className="text-4xl font-bold mb-8 text-center text-ruby">Our Blogs</h1>
@@ -30,7 +21,7 @@ export default async function BlogListPage() {
               />
               <div className="p-6">
                 <h2 className="text-2xl font-semibold mb-3 text-gray-800">{blog.title}</h2>
-                <p className="text-gray-700 text-base mb-4">{blog.excerpt}</p>
+
                 <button className="text-ruby font-medium hover:underline">
                   Read More
                 </button>
