@@ -36,13 +36,15 @@ export default async function PartnerPage({ params }: Props) {
   return (
     <>
       <Navbar />
-      <div className="max-w-3xl mx-auto p-8 min-h-[100dvh] flex flex-col md:flex-row items-center md:items-start">
+      <div className="  mx-auto p-8 min-h-[100dvh] ">
+        <div className="mx-auto w-fit  flex flex-col md:flex-row items-center md:items-start">
+
         <Image
           src={partner.logo}
           alt={partner.name}
-          width={128}
-          height={128}
-          className="h-32 w-32 mb-6 md:mb-0 md:mr-8 object-contain"
+          width={500}
+          height={500}
+          className="h-124 w-124 mb-6 md:mb-0 md:mr-8 object-contain"
         />
         <div className="text-center md:text-left">
           <h1 className="text-3xl font-bold mb-2">{partner.name}</h1>
@@ -57,6 +59,7 @@ export default async function PartnerPage({ params }: Props) {
             </ul>
           </div>
         </div>
+          </div>
       </div>
       <Footer />
     </>
