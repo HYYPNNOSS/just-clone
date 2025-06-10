@@ -70,7 +70,7 @@ const SlidingMenu: React.FC<SlidingMenuProps> = ({ isOpen, setIsOpen }) => {
                 Services
               </li>
             </Link>
-            <Link href="/partenaires" passHref>
+            <Link href="/partners" passHref>
               <li
                 className="cursor-pointer text-gray-800 hover:text-ruby"
                 onClick={() => setIsOpen(false)}
