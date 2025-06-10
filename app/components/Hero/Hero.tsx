@@ -1,7 +1,6 @@
-
 export default function Hero() {
     return (
-        <section className="w-full h-[80dvh] bg-hero-pattern bg-cover bg-center bg-no-repeat relative" id="Hero">
+        <section className="w-full h-[80dvh] bg-[url('/images/accounting-firm.png')] bg-cover bg-center bg-no-repeat relative" id="Hero">
             <div className="absolute w-full h-full top-0 left-0 hero-fg"></div>
             <div className="container">
                 <div className="flex flex-col justify-center items-start h-[90dvh] w-2/5 max-2xl:w-3/5 max-md:w-5/6 max-xs:w-full space-y-6">
