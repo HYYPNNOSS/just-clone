@@ -4,7 +4,7 @@ export default function Hero() {
     return (
         <section className="w-full h-[80dvh] relative" id="Hero">
             <Image
-                src="/Images/cafge_blogs.png"
+                src="/Images/Cafge_blogs.png"
                 alt="Blog Hero Background"
                 fill
                 className="object-cover"
@@ -19,7 +19,7 @@ export default function Hero() {
                     <p className="text-2xl text-white leading-relaxed max-lg:text-xl max-sm:text-lg max-xs:text-md z-10">
                         Expert accounting services focused on clarity, precision, and empowering your financial growth.
                     </p>
-                    <div className="flex flex-col xs:flex-row gap-4 xs:gap-8 text-white pt-8 font-medium">
+                    <div className="flex flex-col xs:flex-row gap-4 xs:gap-8 text-white z-10 pt-8 font-medium">
                         <button className="bg-ruby py-4 px-8 rounded-lg hover:bg-ruby-dark transition duration-300">Contactez-nous</button>
                         <button className="bg-transparent border border-white py-4 px-8 rounded-lg hover:bg-white hover:text-ruby transition duration-300">En Savoir Plus</button>
                     </div>

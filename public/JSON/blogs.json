@@ -4,14 +4,14 @@
       "title": "First Blog Post",
       "slug": "first-blog-post",
       "content": "This is the content of the first blog post.",
-      "image": "/Images/cafge_blogs.png"
+      "image": "/Images/Cafge_blogs.png"
     },
     {
       "id": 2,
       "title": "Second Blog Post",
       "slug": "second-blog-post",
       "content": "This is the content of the second blog post.",
-      "image": "/Images/cafge_blogs.png"
+      "image": "/Images/Cafge_blogs.png"
     }
   ]
   

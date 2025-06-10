@@ -4,7 +4,7 @@ export default function Hero() {
     return (
         <section className="w-full h-[80dvh] relative" id="Hero">
             <Image
-                src="/images/accounting-firm.png"
+                src="/Images/accounting-firm.png"
                 alt="Hero Background"
                 fill
                 className="object-cover"
@@ -19,7 +19,7 @@ export default function Hero() {
                     <p className="text-2xl text-white leading-relaxed max-lg:text-xl max-sm:text-lg max-xs:text-md xs:text-sm xl:text-3xl 2xl:text-3xl z-10">
                         Expert accounting services focused on clarity, precision, and empowering your financial growth.
                     </p>
-                    <div className="flex flex-col xs:flex-row gap-4 xs:gap-8 text-white pt-8 font-medium">
+                    <div className="flex flex-col xs:flex-row gap-4 xs:gap-8 text-white pt-8 z-10 font-medium">
                         <button className="bg-ruby py-4 px-8 rounded-lg hover:bg-ruby-dark transition duration-300">Contactez-nous</button>
                         <button className="bg-transparent border border-white py-4 px-8 rounded-lg hover:bg-white hover:text-ruby transition duration-300">En Savoir Plus</button>
                     </div>
