@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import {georgia, workSans, poppins} from "./fonts/Fonts"
+
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,7 +18,11 @@ export default function RootLayout({
       <body
         className={`${georgia.variable} ${workSans.variable} ${poppins.variable} font-workSans`}
       >
+            
+
         {children}
+        
+
       </body>
     </html>
   );
